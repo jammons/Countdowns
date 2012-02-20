@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    {% block title %}
+        <title>Countdowns</title>
+    {% endblock title %}
+    
+    {% block styles %}
+    <!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Varela&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}less/styles.less" media="screen, print" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/less-css.min.js"></script>
+    {% endblock styles %}
+    
+</head>
+
+<body>
+<div id="header">
+    <img src="{{ STATIC_URL }}img/header.png" />
+</div><!-- end #header -->
+
+<div id="content">
+    {% block content %}
+    {% endblock content %}
+    <div class="clear"></div>
+</div><!-- end #content -->
+
+<div id="footer">
+</div><!-- end #footer -->
+
+{% block scripts %}
+{% endblock scripts %}
+
+</body>
+
+</html>

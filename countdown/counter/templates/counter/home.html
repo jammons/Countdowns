@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="content-inner">
+        <div class="horiz-div"></div>
+        {% for counter in counters %}
+            {% include "counter/featured.html" %}
+        {% endfor %}
+    </div><!-- end #content-inner -->
+{% endblock %}
