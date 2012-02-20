@@ -8,9 +8,11 @@ def add_details(counter, now):
     time_left = counter.end_date - now
 
     days = time_left.days
-    hours = time_left.seconds / 3600
+    hours = str(time_left.seconds / 3600)
+    if len(hours) == 1:
+        hours = '0' + hours
 
-    minutes = str((time_left.seconds / 60) - (hours * 60))
+    minutes = str((time_left.seconds / 60) - (int(hours) * 60))
     if len(minutes) == 1:
         minutes = '0' + minutes
 
