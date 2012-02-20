@@ -157,4 +157,4 @@ LOGGING = {
 }
 
 if PROD:
-    import prod_settings
+    from prod_settings import *
