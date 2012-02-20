@@ -1,13 +1,19 @@
-import os
+import os, platform
 # Django settings for countdown project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+
+PROD = True if (platform.node() == 'myprodbox.hosting.com') else False
+DEV = True if (platform.node() == 'Quicksilver') else False
+
+if DEV:
+    DEBUG = True
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 ADMINS = (
-    # ('Jeff Ammons', 'jeff@jeffammons.net'),
+    ('Jeff Ammons', 'jeff@jeffammons.net'),
 )
 
 MANAGERS = ADMINS
@@ -148,3 +154,6 @@ LOGGING = {
         },
     }
 }
+
+if PROD:
+    import prod_settings
