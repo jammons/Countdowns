@@ -30,7 +30,7 @@ def home(request):
     within the last 24 hours. '''
     now = datetime.datetime.now()
     yesterday = now - datetime.timedelta(days=1)
-    counters = Counter.objects.filter(end_date__gte=yesterday)
+    counters = Counter.objects.filter(end_date__gte=yesterday).order_by('end_date')
 
     for counter in counters:
         add_details(counter, now)
