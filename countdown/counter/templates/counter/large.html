@@ -1,28 +1,28 @@
-<div class="counter-large">
+<div class="counter-large counter">
     <div class='left-column'>
         <h2>{{ counter.title }}</h2>
         <p>{{ counter.description }}</p>
     </div>
     <div class="vert-div"></div>
     <div class="right-column">
-        <div class="days counter">
+        <div class="days number">
             <h3>Days</h3>
-            <span>{{ counter.days }}</span>
+            <span class="value">{{ counter.days }}</span>
         </div>
         <div class="vert-div"></div>
-        <div class="hours counter">
+        <div class="hours number">
             <h3>Hours</h3>
-            <span>{{ counter.hours }}</span>
+            <span class="value">{{ counter.hours }}</span>
         </div>
         <span class="colon">:</span>
-        <div class="minutes counter">
+        <div class="minutes number">
             <h3>Minutes</h3>
-            <span>{{ counter.minutes }}</span>
+            <span class="value">{{ counter.minutes }}</span>
         </div>
         <span class="colon">:</span>
-        <div class="seconds counter">
+        <div class="seconds number">
             <h3>Seconds</h3>
-            <span>{{ counter.seconds }}</span>
+            <span class="value">{{ counter.seconds }}</span>
         </div>
     </div>
 </div>
